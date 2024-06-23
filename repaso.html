@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Título del Encabezado</h1>
+        <p class="lead">Mensaje descriptivo</p>
+        <hr class="my-4" />
+        <p>Texto adicional o información relevante</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button"
+          >Botón de Acción</a
+        >
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <img src="ruta/a/imagen1.jpg" class="img-fluid" alt="Imagen 1" />
+
+          <p>Descripción de la imagen 1</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="ruta/a/imagen2.jpg" class="img-fluid" alt="Imagen 2" />
+
+          <p>Descripción de la imagen 2</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="ruta/a/imagen3.jpg" class="img-fluid" alt="Imagen 3" />
+
+          <p>Descripción de la imagen 3</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="ruta/a/imagen4.jpg" class="img-fluid" alt="Imagen 4" />
+
+          <p>Descripción de la imagen 4</p>
+        </div>
+      </div>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo Electrónico</label>
+
+          <input type="email" class="form-control" id="correo" />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+      <div class="alert alert-success" role="alert">
+        ¡Éxito! Tu mensaje ha sido enviado correctamente.
+      </div>
+      <div class="alert alert-warning" role="alert">
+        Advertencia: Recuerda completar todos los campos del formulario.
+      </div>
+      <div class="alert alert-danger" role="alert">
+        Error: Ha ocurrido un problema al enviar el mensaje.
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

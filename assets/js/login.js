@@ -7,7 +7,7 @@ $(document).ready(function () {
     if (username === "mimolas" && password === "123momiaes") {
       window.location.href = "menu.html";
     } else {
-      alert("Usuario o contraseña invalido. Inténtalo de nuevo.");
+      alert("Usuario o contraseña inválido. Inténtalo de nuevo.");
     }
   });
 });

@@ -13,26 +13,33 @@
   <body>
     <div class="container">
       <h2>Depositar</h2>
-      <form id="depositForm">
+      <form id="depositForm" class="needs-validation" novalidate>
         <div class="form-group">
-          <label for="amount">Monto a depositar:</label>
+          <label for="monto">Monto a depositar:</label>
           <input
             type="number"
             class="form-control"
-            id="amount"
-            placeholder="Ingrese un monto"
-            min="1"
+            id="monto"
+            name="monto"
+            placeholder="Ingrese monto a depositar."
+            min="1000"
+            step="1000"
             required
           />
+          <div class="invalid-feedback">
+            Por favor, ingrese un monto válido.
+          </div>
         </div>
-        <button id="depositBtn" type="button" class="btn btn-primary">
+        <button id="depositBtn" type="submit" class="btn btn-primary mt-3">
           Realizar depósito
         </button>
       </form>
-      <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+      <a href="menu.html" class="btn btn-secondary mt-3"
+        >Volver al Menú Principal</a
+      >
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/transactions.js"></script>
+    <script src="../assets/js/transactions.js"></script>
   </body>
 </html>

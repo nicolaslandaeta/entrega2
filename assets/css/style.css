@@ -10,3 +10,8 @@ body {
 .form-group {
   margin-bottom: 1em;
 }
+
+.list-group-item.selected {
+  background-color: #007bff;
+  color: white;
+}

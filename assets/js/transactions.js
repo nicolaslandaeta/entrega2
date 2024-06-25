@@ -1,31 +1,19 @@
 $(document).ready(function () {
-  let balance = 0;
+  $("#depositForm").on("submit", function (event) {
+    event.preventDefault(); // Previene la recarga
 
-  function updateBalance() {
-    $("#balance").text(balance.toFixed(2));
-  }
+    const monto = parseFloat($("#monto").val()); // Obtiene el input y se convierte a números
+    let balanceActual = parseFloat(localStorage.getItem("balance") || "0");
 
-  $("#depositBtn").click(function () {
-    let amount = parseFloat($("#amount").val());
-    if (!isNaN(amount) && amount > 0) {
-      balance += amount;
-      updateBalance();
-      $("#amount").val("");
-      alert("Depósito efectuado satisfactoriamente");
+    if (monto > 0) {
+      balanceActual += monto;
+      localStorage.setItem("balance", balanceActual.toFixed(2)); // Actualiza balance
+
+      alert("Depósito realizado con éxito.");
+      // Redirige a menu con el balance actualizado
+      window.location.href = "menu.html";
     } else {
-      alert("El monto ingresado no es válido.");
-    }
-  });
-
-  $("#withdrawBtn").click(function () {
-    let amount = parseFloat($("#amount").val());
-    if (!isNaN(amount) && amount > 0 && amount <= balance) {
-      balance -= amount;
-      updateBalance();
-      $("#amount").val("");
-      alert("Retiro exitoso!");
-    } else {
-      alert("Cantidad no válida. Ingrese un número válido dentro de su saldo.");
+      alert("Por favor, ingrese un monto válido.");
     }
   });
 });

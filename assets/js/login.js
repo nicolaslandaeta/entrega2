@@ -3,7 +3,7 @@ $(document).ready(function () {
     event.preventDefault();
     let username = $("#username").val();
     let password = $("#password").val();
-
+    // Validar usuario y contraseña
     if (username === "mimolas" && password === "123momiaes") {
       window.location.href = "menu.html";
     } else {
